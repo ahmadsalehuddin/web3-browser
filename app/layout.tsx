@@ -4,6 +4,9 @@ import dynamic from "next/dynamic";
 
 // Stylings
 import "bootstrap/dist/css/bootstrap.min.css";
+ import "@fortawesome/fontawesome-svg-core/styles.css";
+ import { config } from "@fortawesome/fontawesome-svg-core";
+ config.autoAddCss = false;
 import "./globals.css";
 // import { Inter } from 'next/font/google'
 
