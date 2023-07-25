@@ -2,11 +2,13 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
+import SideNavBar from "@/components/SideNavBar/SideNavBar";
+
 // Stylings
 import "bootstrap/dist/css/bootstrap.min.css";
- import "@fortawesome/fontawesome-svg-core/styles.css";
- import { config } from "@fortawesome/fontawesome-svg-core";
- config.autoAddCss = false;
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 import "./globals.css";
 // import { Inter } from 'next/font/google'
 
@@ -29,7 +31,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="container-fluid">
+        <div className="row">
+          <div className="col-lg-3 pt-2">
+            <SideNavBar />
+          </div>
+          <div className="col bg-info">
+            <div className="row">
+              <div className="col">{children}</div>
+            </div>
+            <div className="row">
+              <div className="col">This is copyright</div>
+            </div>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
