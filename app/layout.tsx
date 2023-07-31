@@ -33,10 +33,10 @@ export default function RootLayout({
     <html lang="en">
       <body className="container-fluid">
         <div className="row">
-          <div className="col-lg-3 pt-2">
+          <div className="col-md-3 pt-2">
             <SideNavBar />
           </div>
-          <div className="col bg-info">
+          <div className="col">
             <div className="row">
               <div className="col">{children}</div>
             </div>
